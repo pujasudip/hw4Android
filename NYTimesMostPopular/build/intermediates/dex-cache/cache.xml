@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1059cb02a7c200423ec4d3abfb8347b10c643ea0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8debd4cc8f9f44bdd6c2eb56f9f84e2054f0031c">
+        <dex dex="/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d033bc367e1f1f1f83ed249ce74cad2c7d8f0b63/classes.dex" />
+    </item>
+
+</items>

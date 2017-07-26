@@ -1,0 +1,4 @@
+#Tue Jul 25 16:36:57 PDT 2017
+base.0=/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4
+renamed.0=classes.dex
+file.0=/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex
