@@ -24,11 +24,15 @@ import java.util.Scanner;
 public class NetworkUtils {
     public static final String TAG = "NetworkUtils";
 
+    //this is the website api uri of the news source
     public static final String GITHUB_BASE_URL =
             "https://newsapi.org/v1/articles";;
+
+    //these two constants are the words that matches the uri
     final static String PARAM_QUERY = "source";
     final static String THE_NEXT_WEB = "the-next-web";
 
+    //added these constants after the creation of my account
     final static String PARAM_SORT = "sortBy";
     final static String sortBy = "latest";
     final static String apiKey = "apiKey";
@@ -71,13 +75,18 @@ public class NetworkUtils {
     public static ArrayList<Article> parseJSON(String json) throws JSONException {
         ArrayList<Article> string = new ArrayList<>();
         JSONObject main = new JSONObject(json);
+
+        //articles object is obtained
         JSONArray items = main.getJSONArray("articles");
 
         for(int i = 0; i < items.length(); i++) {
+            //iterating through the object to get the string
             JSONObject item = items.getJSONObject(i);
             String title = item.getString("title");
             String description = item.getString("description");
             String published_date = item.getString("publishedAt");
+
+            //this keyword is to get the image url - in the website I'm using they are using 'urlToImage' keyword
             String urlToImage = item.getString("urlToImage");
             String url = item.getString("url");
             Article article = new Article(title,  published_date, description, urlToImage, url);

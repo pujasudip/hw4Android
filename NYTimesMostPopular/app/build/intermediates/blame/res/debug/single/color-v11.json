@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/pujasudip/.android/build-cache/af4fdb052c51fa3eb9cb76c4b25c575827e3f061/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/pujasudip/Desktop/hw4Android/NYTimesMostPopular/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/pujasudip/.android/build-cache/af4fdb052c51fa3eb9cb76c4b25c575827e3f061/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/Users/pujasudip/Desktop/mm/Android-Class-Examples/NYTimesMostPopular/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/pujasudip/.android/build-cache/af4fdb052c51fa3eb9cb76c4b25c575827e3f061/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/pujasudip/Desktop/hw4Android/NYTimesMostPopular/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/pujasudip/.android/build-cache/af4fdb052c51fa3eb9cb76c4b25c575827e3f061/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]

@@ -75,12 +75,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemHolder>{
         }
 
         public void bind(int pos){
+
+            //this part of the codes get data from the database and binds to recyclerview
             cursor.moveToPosition(pos);
             title.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_ARTICLES.COLUMN_NAME_TITLE)));
             abstr.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_ARTICLES.COLUMN_NAME_ABSTRACT)));
             publishDate.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_ARTICLES.COLUMN_NAME_PUBLISHED_DATE)));
             String url = cursor.getString(cursor.getColumnIndex(Contract.TABLE_ARTICLES.COLUMN_NAME_THUMBURL));
             Log.d(TAG, url);
+
+
+            //here Picasso is used to load url and retreive the image thumbnail to put it in the article
             if(url != null){
                 Picasso.with(context)
                         .load(url)

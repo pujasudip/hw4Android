@@ -3,10 +3,11 @@
 android:orientation="horizontal"
 android:layout_width="match_parent"
 android:layout_height="wrap_content">
+    <!--I change the layout of the xml to get the image first and than articles -->
 <ImageView
     android:id="@+id/img"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
     android:cropToPadding="true"
     android:scaleType="centerCrop"
     android:padding="10dp"/>
@@ -33,6 +34,7 @@ android:layout_height="wrap_content">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:maxLines="1"
             android:layout_marginTop="5dp"
             android:text="04-02-2006"/>
     </LinearLayout>

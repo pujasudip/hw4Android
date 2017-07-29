@@ -30,13 +30,19 @@ import com.firebase.jobdispatcher.Trigger;
 import java.util.concurrent.TimeUnit;
 
 public class ScheduleUtilities {
-    private static final int SCHEDULE_INTERVAL_MINUTES = 360;
+
+    //this is the time interval where firebasejobdispatcher triggers the reminder
+    //which implemented through .setTrigger
+    private static final int SCHEDULE_INTERVAL_MINUTES = 1;
     private static final int SYNC_FLEXTIME_SECONDS = 60;
     private static final String NEWS_JOB_TAG = "news_job_tag";
 
     private static boolean sInitialized;
 
+    //this method will run only once as it is synchronized method
     synchronized public static void scheduleRefresh(@NonNull final Context context){
+
+        //this will check if the job has been started or not if started will just return
         if(sInitialized) return;
 
         Driver driver = new GooglePlayDriver(context);

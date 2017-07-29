@@ -41,11 +41,17 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         progress = (ProgressBar) findViewById(R.id.progressBar);
         rv = (RecyclerView) findViewById(R.id.recyclerView);
+
+        //linear layout manager is called to set the layout
         rv.setLayoutManager(new LinearLayoutManager(this));
+
+        //shared preferences are obtained from the current object
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         boolean isFirst = prefs.getBoolean("isfirst", true);
 
         if (isFirst) {
+            //if isFirst is true which means data already exists so load() is called to get data
             load();
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("isfirst", false);
@@ -60,6 +66,7 @@ public class MainActivity extends AppCompatActivity
         db = new DBHelper(MainActivity.this).getReadableDatabase();
         cursor = DatabaseUtils.getAll(db);
         adapter = new MyAdapter(cursor, this);
+        //recylerview loads from database
         rv.setAdapter(adapter);
     }
 
@@ -87,18 +94,21 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    //this is a loader and onCreateLoader has been overridden
     @Override
     public Loader<Void> onCreateLoader(int id, final Bundle args) {
         return new AsyncTaskLoader<Void>(this) {
 
             @Override
             protected void onStartLoading() {
+                //onStartLoading progress visibility set to visible
                 super.onStartLoading();
                 progress.setVisibility(View.VISIBLE);
             }
 
             @Override
             public Void loadInBackground() {
+                //in background refreshArticles of RefreshTasks is called
                 RefreshTasks.refreshArticles(MainActivity.this);
                 return null;
             }
@@ -122,6 +132,8 @@ public class MainActivity extends AppCompatActivity
     public void onLoaderReset(Loader<Void> loader) {
     }
 
+    //this method will start a implicit intent when article is clicked
+    //As item is clicked, it will ask the user to open browser through prompt
     @Override
     public void onItemClick(Cursor cursor, int clickedItemIndex) {
         cursor.moveToPosition(clickedItemIndex);
@@ -133,6 +145,8 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+
+    //this method is called when data is already existing in the database
     public void load() {
         LoaderManager loaderManager = getSupportLoaderManager();
         loaderManager.restartLoader(NEWS_LOADER, null, this).forceLoad();
@@ -140,3 +154,5 @@ public class MainActivity extends AppCompatActivity
     }
 
 }
+
+//changed layout in xml to get desired format
